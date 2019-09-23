@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void handleExit(View view) {
+        Intent intent = new Intent(this, ExplicitIntentActivity.class);
         finish();
     }
 
@@ -30,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void handleBundle(View view) {
         Intent intent = new Intent(this, BundleActivity.class);
+        startActivity(intent);
+    }
+
+    public void handleParcel(View view) {
+        Intent intent = new Intent(this, ParcelableActivity.class);
         startActivity(intent);
     }
 }
